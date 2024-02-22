@@ -27,7 +27,6 @@ npm run play
 - To replay, run `node play.js` again inside for you play terminal instance
 
 ## Final Product
-
-![Pic 1!](https://imgbox.com/pL7DEAcQ)
-![Pic 2!](https://imgbox.com/fCoGg0Ef)
-![Bonus pic in case you didnt know what to expect from the other 2 images!](https://imgbox.com/DXaOxDtC)
+![Pic 1!](images/image1.png)
+![Pic 2!](images/image2.png)
+![Bonus Pic if youre still confused about the game of Snake!](images/image3.png)
