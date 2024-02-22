@@ -21,7 +21,8 @@ const usersInitials = {
   name: undefined
 };
 
-usersInitials.name = "KAO"
+// users, add initials here! can only be <= 3 charaters or numerical 
+usersInitials.name = "NAM"; // <== your initials here!
 
 module.exports = {
   IP,

@@ -8,7 +8,6 @@ const connect = function() {
     port: PORT
   });
 
-
   // on connection connect, prints below and write Name: to server
   conn.on("connect", () => {
     console.log(`Successfully connected to game server`);
@@ -19,7 +18,6 @@ const connect = function() {
   conn.on("data", (data) => {
     console.log(data);
   });
-
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
