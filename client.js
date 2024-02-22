@@ -1,9 +1,11 @@
 const net = require("net");
+const { IP, PORT } = require('./constants');
+
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    host: "172.30.156.235",
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
 
@@ -11,7 +13,6 @@ const connect = function() {
   conn.on("connect", () => {
     console.log(`Successfully connected to game server`);
     conn.write("Name: NAM");
-    conn.write("Say: beep");
   });
 
   // on timeout, passes a msg to the user

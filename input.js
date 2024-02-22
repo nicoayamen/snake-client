@@ -1,3 +1,5 @@
+const { MOVE_KEYS, sayMessage } = require('./constants');
+
 // stores active TCP connection obj
 let connection;
 
@@ -7,15 +9,6 @@ const setupInput = function (conn) {
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-
-  // object that holds key press and its value. so in func below, if  user presses w, will send move up to server etc...
-  MOVE_KEYS = {
-    w : "up",
-    s : "down",
-    a : "left",
-    d : "right",
-  }
-
 
 // declaring a var to pass below to let snake move until new input
 let intervalId;
@@ -34,7 +27,11 @@ let intervalId;
         }, 75)
 
         return;
-        
+
+      }
+
+      if (sayMessage[key]) {
+        conn.write(`Say: ${sayMessage[key]}`);
       }
       
   }
