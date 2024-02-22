@@ -13,14 +13,15 @@ const setupInput = function(conn) {
   // declaring a var to pass below to let snake move until new input
   let intervalId;
 
-  //ctrl + c is the only way to exit the application, now checks to see if what key is and moves snake accordingly
+  //ctrl + c is the only way to exit the application
   const handleUserInput = function(key) {
     if (key === '\u0003') {
       console.log(`See ya later!`);
       process.exit();
     }
 
-    // if user presses a key...
+    // if user presses a key checks to see what key is and moves snake accordingly
+    // takes from the MOVE_KEYS obj. also snake moves continuously until new move input
     if (MOVE_KEYS[key]) {
       conn.write(`Move: ${MOVE_KEYS[key]}`);
       if (intervalId) clearInterval(intervalId);
@@ -32,6 +33,7 @@ const setupInput = function(conn) {
 
     }
 
+    // our canned messages. takes from sayMessage obj
     if (sayMessage[key]) {
       conn.write(`Say: ${sayMessage[key]}`);
     }
