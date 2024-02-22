@@ -12,12 +12,13 @@ const connect = function () {
     console.log(`Successfully connected to game server`);
     conn.write("Name: NAM")
     //conn.write("Move: up")
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 500);
-    setInterval(() => {
-      conn.write("Move: left");
-    }, 300);
+    // sends data to server to make snake move up and left in intervals until death...
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 500);
+    // setInterval(() => {
+    //   conn.write("Move: left");
+    // }, 300);
     // setTimeout(() => {
     //   conn.write("Move: up"), 5000
     // })
