@@ -8,27 +8,35 @@ const setupInput = function (conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
 
+  // object that holds key press and its value. so in func below, if  user presses w, will send move up to server etc...
+  MOVE_KEYS = {
+    w : "up",
+    s : "down",
+    a : "left",
+    d : "right",
+  }
+
+
+// declaring a var to pass below to let snake move until new input
+let intervalId;
+
   //ctrl + c is the only way to exit the application, now checks to see if what key is and moves snake accordingly
   const handleUserInput = function (key) {
       if (key === '\u0003') {
         process.exit();
       }
-      if (key === "w") {
-        conn.write('Move: up')
-        // console.log('pressed ' + key)
+      // if user presses a key...
+      if (MOVE_KEYS[key]) {
+        conn.write(`Move: ${MOVE_KEYS[key]}`);
+        if (intervalId) clearInterval(intervalId);
+        intervalId = setInterval(() => {
+          conn.write(`Move: ${MOVE_KEYS[key]}`);
+        }, 75)
+
+        return;
+        
       }
-      if (key === "a") {
-        conn.write('Move: left')
-        // console.log('pressed ' + key)
-      }
-      if (key === "s") {
-        conn.write('Move: down')
-        // console.log('pressed ' + key)
-      }
-      if (key === "d") {
-        conn.write('Move: right')
-        // console.log('pressed ' + key)
-      }
+      
   }
 
   // when data is being sent to the server, it calls back handleUserInput
