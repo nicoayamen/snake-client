@@ -28,6 +28,6 @@ npm run play
 
 ## Final Product
 
-![alt text](https://imgbox.com/S3vsDil8)
-![alt text](https://imgbox.com/PtvB2E9g)
-![alt text](https://imgbox.com/X74BhBQc)
+![alt text](https://imgbox.com/pL7DEAcQ)
+![alt text](https://imgbox.com/fCoGg0Ef)
+![alt text](https://imgbox.com/DXaOxDtC)
