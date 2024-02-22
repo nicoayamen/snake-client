@@ -28,6 +28,6 @@ npm run play
 
 ## Final Product
 
-![alt text](https://imgbox.com/pL7DEAcQ)
-![alt text](https://imgbox.com/fCoGg0Ef)
-![alt text](https://imgbox.com/DXaOxDtC)
+![Pic 1!](https://imgbox.com/pL7DEAcQ)
+![Pic 2!](https://imgbox.com/fCoGg0Ef)
+![Bonus pic in case you didnt know what to expect from the other 2 images!](https://imgbox.com/DXaOxDtC)
