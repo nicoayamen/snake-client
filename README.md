@@ -22,8 +22,10 @@ npm run play
 
 ## Usage
 - WASD is used to move around the game world. (W = up, S = down, A = left, D = right)
+- Hold down a key to move faster!
 - Get your snake to the red boxes to grow and avoid yourself and the wall
 - Should your snake hit the wall or itself, its game over!
+- Want to chat? Press Z, X, C, or V for a quick message to be broadcasted!
 - To replay, run `node play.js` again inside for you play terminal instance
 
 ## Final Product
