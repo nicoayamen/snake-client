@@ -32,3 +32,6 @@ npm run play
 ![Pic 1!](images/image1.png)
 ![Pic 2!](images/image2.png)
 ![Bonus Pic if youre still confused about the game of Snake!](images/image3.png)
+
+## Special Thanks
+Thank you to to Lighthouse Labs and <a href ="https://www.taniarascia.com" target="_blank">Tania Rascia</a> for creating the server code to run my client side code!
