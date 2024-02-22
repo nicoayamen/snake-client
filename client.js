@@ -6,9 +6,18 @@ const connect = function () {
     port: 50541
   });
 
+
+  // on connection connect, prints below and write Name: to server
+  conn.on("connect", () => {
+    console.log(`Successfully connected to game server`);
+    conn.write("Name: NAM")
+  })
+
+  // on timeout, passes a msg to the user
   conn.on("data", (data) => {
     console.log(data)
   })
+
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
