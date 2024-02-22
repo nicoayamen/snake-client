@@ -18,10 +18,10 @@ const sayMessage = {
 };
 
 const usersInitials = {
-  name: "NAM",
+  name: undefined
 };
 
-
+usersInitials.name = "KAO"
 
 module.exports = {
   IP,
