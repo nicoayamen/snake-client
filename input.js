@@ -25,21 +25,22 @@ const handleUserInput = function(key) {
     process.exit();
   }
 
-  // if user presses a key...
-  if (MOVE_KEYS[key]) {
-    connection.write(`Move: ${MOVE_KEYS[key]}`);
-    if (intervalId) clearInterval(intervalId);
-    intervalId = setInterval(() => {
-      connection.write(`Move: ${MOVE_KEYS[key]}`);
-    }, 75);
+    // if user presses a key checks to see what key is and moves snake accordingly
+    // takes from the MOVE_KEYS obj. also snake moves continuously until new move input
+    if (MOVE_KEYS[key]) {
+      conn.write(`Move: ${MOVE_KEYS[key]}`);
+      if (intervalId) clearInterval(intervalId);
+      intervalId = setInterval(() => {
+        conn.write(`Move: ${MOVE_KEYS[key]}`);
+      }, 75);
 
     return;
 
   }
 
-  if (sayMessage[key]) {
-    connection.write(`Say: ${sayMessage[key]}`);
-  }
+    if (sayMessage[key]) {
+      conn.write(`Say: ${sayMessage[key]}`);
+    }
 
 };
 
