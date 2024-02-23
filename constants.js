@@ -1,4 +1,4 @@
-const IP = "172.30.156.235";
+const IP = "localhost";
 const PORT = 50541;
 
 // object that holds key press and its value. so in func below, if  user presses w, will send move up to server etc...
